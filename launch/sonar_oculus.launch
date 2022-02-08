@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="rqt" default="true"/>
+  <arg name="sonar" default="true"/>
+
+  <!-- Start the sonar reading -->
+  <node if="$(arg sonar)" name="sonar_oculus_node" pkg="sonar_oculus" type="sonar_oculus_node" output="screen">
+    <param name="frame" type="string" value="/sonar"/>
+  </node>
+
+  <!-- Open Oculus viewer -->
+  <node name="sonar_oculus_viewer" pkg="sonar_oculus" type="oculus_viewer.py" output="screen"/>
+
+  <!-- Open RQT with Sonar image viewer and dynamic reconfigure window -->
+  <node if="$(arg rqt)" name="rqt_gui" pkg="rqt_gui" type="rqt_gui" 
+        args="--perspective-file $(find sonar_oculus)/launch/sonar_oculus.perspective"/>
+
+  <!-- Establish a static transform to link rviz map to sonar -->
+  <node name="sonar_base_link" pkg="tf2_ros" type="static_transform_publisher" args="0.2 0 0.15 0 0 0 base_link sonar 100"/>
+
+</launch>
