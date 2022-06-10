@@ -10,7 +10,6 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-SET(cv_bridge_DIR /home/soslab/Develop/ros/ros_ws/devel/share/cv_bridge/cmake)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
