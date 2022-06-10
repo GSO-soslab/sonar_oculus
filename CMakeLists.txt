@@ -3,6 +3,7 @@ project(sonar_oculus)
 
 add_compile_options(-std=c++11)
 
+SET(OpenCV_DIR /home/lin/develop/3rd/opencv/install/opencv-4.2.0/lib/cmake/opencv4/)
 find_package(OpenCV)
 message(STATUS "OpenCV library status:")
 message(STATUS "    config: ${OpenCV_DIR}")
@@ -10,7 +11,7 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-SET(cv_bridge_DIR /home/soslab/Develop/ros/ros_ws/devel/share/cv_bridge/cmake)
+SET(cv_bridge_DIR /home/lin/develop/ros/ros_ws/devel/share/cv_bridge/)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
