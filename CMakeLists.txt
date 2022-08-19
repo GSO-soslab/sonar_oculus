@@ -3,12 +3,29 @@ project(sonar_oculus)
 
 add_compile_options(-std=c++11)
 
-find_package(OpenCV)
-message(STATUS "OpenCV library status:")
-message(STATUS "    config: ${OpenCV_DIR}")
-message(STATUS "    version: ${OpenCV_VERSION}")
-message(STATUS "    libraries: ${OpenCV_LIBS}")
-message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+
+set(TARGET_ARCH "${CMAKE_SYSTEM_PROCESSOR}" CACHE STRING "Target architecture")
+message(STATUS "found platform: ${CMAKE_SYSTEM_PROCESSOR}")
+if (TARGET_ARCH MATCHES "^arm")
+  set(ARM ON) # This means AArch32.
+  set(X64 OFF)
+  message(STATUS "Building for ARM 32")
+elseif (TARGET_ARCH MATCHES "^aarch64")
+  set(ARM ON)
+  set(X64 ON)
+  message(STATUS "Building for ARM 64")
+else ()
+  set(ARM OFF)
+  message(STATUS "Building for x86|x64")
+endif ()
+
+if(ARM)
+  find_package(OpenCV REQUIRED)
+else ()
+  SET(OpenCV_DIR /home/lin/develop/3rd/opencv/install/opencv-4.2.0/lib/cmake/opencv4/)
+  find_package(OpenCV 4.2.0 REQUIRED)
+endif()
+
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
