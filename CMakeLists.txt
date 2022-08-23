@@ -20,6 +20,7 @@ else ()
 endif ()
 
 if(ARM)
+  # for jetson 18.04 cv_bridge issue
   SET(cv_bridge_DIR /home/soslab/Develop/ros/ros_ws/devel/share/cv_bridge/cmake)
   find_package(OpenCV REQUIRED)
 else ()
