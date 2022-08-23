@@ -20,6 +20,7 @@ else ()
 endif ()
 
 if(ARM)
+  SET(cv_bridge_DIR /home/soslab/Develop/ros/ros_ws/devel/share/cv_bridge/cmake)
   find_package(OpenCV REQUIRED)
 else ()
   SET(OpenCV_DIR /home/lin/develop/3rd/opencv/install/opencv-4.2.0/lib/cmake/opencv4/)

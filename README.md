@@ -1,5 +1,5 @@
 # sonar_oculus
-ROS device driver for Blueprint Subsea's Oculus multibeam sonars. This package is from [The Robust Field Autonomy Lab at Stevens Institute of Technology](https://github.com/RobustFieldAutonomyLab/bluerov/tree/master/sonar_oculus)
+ROS device driver for Blueprint Subsea's Oculus multibeam sonars. This original package is from [The Robust Field Autonomy Lab at Stevens Institute of Technology](https://github.com/RobustFieldAutonomyLab/bluerov/tree/master/sonar_oculus)
 
 ## Tested in Jetson Xavier NX(Ubuntu18.04, Opencv 4) and Oculus 750d
 
