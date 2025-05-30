@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: sonar_oculus
+Description: Description of sonar_oculus
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs message_runtime image_transport cv_bridge

@@ -1,0 +1,8 @@
+prefix=/home/lin/develop/ros/soslab_ws/src/sensors/sonar_oculus/build/devel
+
+Name: sonar_oculus
+Description: Description of sonar_oculus
+Version: 1.0.0
+Cflags: -I/home/lin/develop/ros/soslab_ws/src/sensors/sonar_oculus/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs message_runtime image_transport cv_bridge

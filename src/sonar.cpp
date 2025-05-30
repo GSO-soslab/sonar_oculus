@@ -207,7 +207,6 @@ int main(int argc, char **argv) {
   ros::Rate r(50); // pvt: sonar should be under 40Hz (reduced 100 to 50)
   unsigned int latest_id = 0; // keep track of latest ping to avoid republishing
   while (ros::ok()) {
-
     // Run the readthread sonar
     sonar.m_readData.run();
 
@@ -215,6 +214,9 @@ int main(int argc, char **argv) {
     unsigned int nbins = sonar.m_readData.m_osBuffer[0].m_rfm.nRanges;
     unsigned int nbeams = sonar.m_readData.m_osBuffer[0].m_rfm.nBeams;
     unsigned int id = sonar.m_readData.m_osBuffer[0].m_rfm.pingId;
+
+    //! TEST:
+    printf("bins=%d, id=%d\n", nbins, id);
 
     // Create pointcloud message from sonar data
     if (nbeams > 0 && nbins > 0 && id > latest_id) {

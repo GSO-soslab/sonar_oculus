@@ -24,6 +24,7 @@ if(ARM)
   find_package(OpenCV REQUIRED)
 else ()
   SET(OpenCV_DIR /home/lin/develop/3rd/opencv/install/opencv-4.2.0/lib/cmake/opencv4/)
+  SET(cv_bridge_DIR /home/lin/develop/ros/ros_ws/devel/share/cv_bridge/cmake/)
   find_package(OpenCV 4.2.0 REQUIRED)
 endif()
 

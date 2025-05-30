@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240725-0155-Experimental"
+	Name="soslab-lin-p52s"
+	Generator="ctest-3.18.0"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="soslab-lin-p52s"
+	OSRelease="5.15.0-116-generic"
+	OSVersion="#126~20.04.1-Ubuntu SMP Mon Jul 1 15:40:07 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="15624"
+	TotalPhysicalMemory="31956"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3418.64"
+	>
+	<Testing>
+		<StartDateTime>Jul 24 21:55 EDT</StartDateTime>
+		<StartTestTime>1721872504</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jul 24 21:55 EDT</EndDateTime>
+		<EndTestTime>1721872504</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lin/develop/ros/soslab_ws/src/sensors/sonar_oculus/build/devel/setup.sh
